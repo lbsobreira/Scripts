@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab inventory {{ generated.strftime('%Y-%m-%d') }}</title>
+<style>
+  body { font-family: sans-serif; font-size: 13px; }
+  table { border-collapse: collapse; }
+  th, td { border: 1px solid #ccc; padding: 3px 8px; }
+  .warn { background: #fde2e2; }
+  .down { color: #999; }
+</style>
+</head>
+<body>
+<h1>Lab inventory</h1>
+<p>Generated {{ generated.strftime('%Y-%m-%d %H:%M') }} - {{ hosts|length }} hosts</p>
+<table>
+  <tr><th>Host</th><th>Kind</th><th>OS</th><th>CPU</th><th>RAM GB</th><th>Uptime d</th><th>Disks</th></tr>
+  {% for h in hosts %}
+  <tr class="{{ 'down' if not h.reachable }}">
+    <td>{{ h.name }}</td><td>{{ h.kind }}</td>
+    {% if h.reachable %}
+    <td>{{ h.os }} {{ h.version }}</td><td>{{ h.cpu_count }}</td><td>{{ h.memory_gb }}</td><td>{{ h.uptime_days }}</td>
+    <td>
+      {% for d in h.disks %}
+      <span class="{{ 'warn' if d.used_pct >= warn_pct }}">{{ d.mount }} {{ d.used_pct }}%</span>
+      {% endfor %}
+    </td>
+    {% else %}
+    <td colspan="5">unreachable: {{ h.error }}</td>
+    {% endif %}
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>

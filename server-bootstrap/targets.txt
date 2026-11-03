@@ -1,0 +1,4 @@
+# Prometheus node exporter targets
+web01.lab.example:9100
+web02.lab.example:9100
+db01.lab.example:9100

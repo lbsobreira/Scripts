@@ -1,0 +1,4 @@
+# Networks allowed to use the proxy
+192.168.10.0/24
+192.168.20.0/24
+10.0.5.17          # build server

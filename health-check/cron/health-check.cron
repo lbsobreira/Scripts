@@ -1,0 +1,4 @@
+# /etc/cron.d/health-check - every 5 minutes
+SHELL=/bin/bash
+MAILTO=""
+*/5 * * * * root /opt/health-check/run-from-cron.sh

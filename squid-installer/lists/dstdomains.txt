@@ -1,0 +1,8 @@
+# Destination domains; a leading dot covers every subdomain
+.ubuntu.com
+.debian.org
+.microsoft.com
+.windowsupdate.com
+.github.com
+pypi.org
+files.pythonhosted.org

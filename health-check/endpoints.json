@@ -1,0 +1,6 @@
+[
+  { "name": "intranet",  "url": "https://intranet.lab.example/health", "expect": "ok",  "cert": true },
+  { "name": "wiki",      "url": "https://wiki.lab.example/api/status", "expect": "up",  "cert": true },
+  { "name": "grafana",   "url": "http://grafana.lab.example:3000/api/health", "expect": "ok", "cert": false },
+  { "name": "registry",  "url": "https://registry.lab.example/v2/_catalog", "expect": null, "cert": true }
+]

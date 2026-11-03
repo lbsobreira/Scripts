@@ -1,0 +1,4 @@
+# user:uid:groups:comment
+alice:2001:sudo,adm:Alice Martins (ops)
+bob:2002:sudo:Bob Keller (ops)
+deploy:2100::CI deploy account

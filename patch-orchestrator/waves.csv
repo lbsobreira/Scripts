@@ -1,0 +1,8 @@
+wave,host,os,lb,check_port,vmid,pve,jump,skip
+1,docker-01,linux,no,,104,pve-01,,
+1,file-01,windows,no,445,,,,
+2,web-01,linux,yes,443,110,pve-01,,
+2,web-02,linux,yes,443,111,pve-02,,
+3,dc-02,windows,no,389,,,,
+3,dmz-01,linux,no,22,,,yes,
+4,dc-01,windows,no,389,,,,yes

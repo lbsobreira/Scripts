@@ -1,0 +1,14 @@
+# Hosts the inventory report asks. The group name is the collector kind.
+linux:
+  - pve-01
+  - pve-02
+  - name: backup-01
+    user: root
+  - docker-01
+windows:
+  - dc-01
+  - dc-02
+  - file-01
+snmp:
+  - sw-core-01
+  - ups-01

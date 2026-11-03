@@ -1,0 +1,14 @@
+{
+    "Servers": [
+        "LAB-DC01",
+        "LAB-DC02",
+        "LAB-FS01",
+        "LAB-SQL01",
+        "LAB-WEB01"
+    ],
+    "DiskWarningPercent": 15,
+    "DiskCriticalPercent": 5,
+    "CimTimeoutSeconds": 20,
+    "ReportFolder": "C:\\Reports\\LabInventory",
+    "UseDcom": false
+}

@@ -1,0 +1,7 @@
+# Patterns passed to tar --exclude-from
+*.tmp
+*.swp
+*/.cache/*
+*/node_modules/*
+/var/www/*/cache/*
+/home/*/Downloads/*

@@ -1,0 +1,12 @@
+# Copy to ~/.config/labctl/config.toml
+[api]
+host = "https://labapi.homelab.local"
+token = ""          # or set LABCTL_TOKEN
+verify_tls = true
+
+[backup]
+target = "nas-01"
+keep = 14
+
+[dns]
+zone = "homelab.local"
